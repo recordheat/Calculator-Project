@@ -24,18 +24,27 @@ body {
     border: 2px solid black;
     height: 600px;
     width: 400px;
+    background-color: gray;
+    box-shadow: 20px 15px 20px;
 }
 
 #screen-output {
+    background-color: whitesmoke;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
     margin-top: 16px;
     border: 2px solid black;
     border-top-right-radius: 16px;
     border-top-left-radius: 16px;
     width: 350px;
     height: 100px;
+    font-size: 30px;
+    font-family: 'Molisa Delawere', sans-serif;
 }
 
 .delete-and-clear {
+    background-color: #D7E4AD ;
     margin-top: auto;
     border: 2px solid black;
     border-radius: 8px;
@@ -55,7 +64,6 @@ body {
     margin-top: auto;
     height: 375px;
     width: 375px;
-
 }
 
 .first-set {
