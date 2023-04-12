@@ -1,10 +1,5 @@
 // Makes the calculator function part of the website
 function calculator () {
-    let firstOperand = '';
-    let secondOperand = '';
-
-
-
     const numButtons = document.querySelectorAll('.number-symbol');
     const operatorButtons = document.querySelectorAll('.operators');
     const screenOutput = document.querySelector('.screen-output');
@@ -54,6 +49,36 @@ operatorButtons.forEach(function(button) {
     });
 });
 
+// Evaluates the user's equaton 
+function calculate() {
+    const equation = screenOutput.textContent;
+    const numbersAndOperators = equation.split(/([-+÷X])/);
+    let result = parseFloat(numbersAndOperators[0]);
+
+    for (let i = 1; i < numbersAndOperators.length; i += 2) {
+        const operator = numbersAndOperators[i];
+        const operand = parseFloat(numbersAndOperators[i + 1]);
+
+
+        result = operate(operator, result, operand);
+
+    }
+
+    result = roundNumber(result);
+    screenOutput.textContent = result.toString();
+}
+
+sumOfNumbers.addEventListener('click', function() {
+    if (screenOutput.textContent === '') {
+        screenOutput.textContent = 'Please enter a number first!';
+    } else {
+     calculate();
+}
+});
+// Round's the user's final number 
+function roundNumber (number) {
+    return Math.round(number * 1000) / 1000
+}
 
 function addition (a, b) {
    return a + b;  
@@ -64,11 +89,8 @@ function subtraction (a, b) {
 }
 
 function division (a, b) {
-   if (b === 0) {
-    return screenOutput.textContent = "ERROR";
-   } else {
-    return a / b;
-   }
+    
+     return a / b;
 }
 
 function multiplication (a, b) {
