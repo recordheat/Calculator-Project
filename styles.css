@@ -28,7 +28,7 @@ body {
     box-shadow: 20px 15px 20px;
 }
 
-#screen-output {
+.screen-output {
     background-color: whitesmoke;
     display: flex;
     align-items: flex-end;
@@ -42,6 +42,7 @@ body {
     font-size: 30px;
     font-family: 'Molisa Delawere', sans-serif;
 }
+
 
 .delete-and-clear {
     background-color: #D7E4AD ;
