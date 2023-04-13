@@ -69,8 +69,8 @@ function calculate() {
 }
 
 sumOfNumbers.addEventListener('click', function() {
-    if (screenOutput.textContent === '' || screenOutput.textContent === 'Please enter a number first!') {
-        screenOutput.textContent = 'Please enter a number first!';
+    if (screenOutput.textContent === '' || screenOutput.textContent === 'ERROR') {
+        screenOutput.textContent = 'ERROR';
     } else {
      calculate();
 }
