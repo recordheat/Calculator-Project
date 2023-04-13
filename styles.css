@@ -140,6 +140,7 @@ img {
     }
 
     .first-set {
-        width: 120px;
+        width: 100px;
+        font-size: 16px;
     }
 }
