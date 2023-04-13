@@ -138,4 +138,8 @@ img {
     p {  
         font-size: 20px;
     }
+
+    .first-set {
+        width: 120px;
+    }
 }
